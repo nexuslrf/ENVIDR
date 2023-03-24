@@ -19,7 +19,6 @@
 
   <!-- bootstrap -->
   <link href="./static/css/bootstrap-4.4.1.css" rel="stylesheet">
-  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
   <!-- icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <!-- font -->
@@ -46,8 +45,14 @@
         height: 100%;
     }
   </style>
-  <script src="static/js/video_comparison.js"></script>
-  <script src="static/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    function resizeIframe(obj){
+    //    obj.style.height = 0;
+       obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+  </script>
+
 </head>
 
 <body>
@@ -98,21 +103,9 @@
 
           </h6></div>
         </div>
-
-        <div class="row" style="padding-top: 20px; margin: 0 auto;">
-          <div class="col-md-8 col-md-offset-2">
-              <div class="video-compare-container" id="materialsDiv">
-                  <video class="video" id="materials" loop playsinline autoPlay muted src="static/video/garden_split.mp4" onplay="resizeAndPlay(this)"></video>
-                  <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
-              </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
-
-  
 
   <!-- abstract -->
   <section>
@@ -188,8 +181,10 @@
           <div class="row" style="max-width: 75%; margin: 0 auto;">
             <div class="col-12 text">
               <h3>Results</h3>
+              <!-- Center the video -->
+              <!-- <iframe src="https://drive.google.com/file/d/12SpjUq6YMUuPe1cRogKmLMIYiGYbexnl/preview" width="640" height="480" allow="autoplay"></iframe> -->
               <div class="video-container" style="align-items:center;">
-                <iframe width="640" height="360" src="https://drive.google.com/file/d/12SpjUq6YMUuPe1cRogKmLMIYiGYbexnl/preview" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://drive.google.com/file/d/1y-1TzzuWt5EPLuFw5iovvV7S1ceifCN6/preview" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
           </div>
