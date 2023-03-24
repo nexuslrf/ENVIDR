@@ -125,9 +125,10 @@
           </p> -->
           <figure class="figure">
             <img src="./static/image/render_overview.jpg" class="figure-img img-fluid rounded" alt="Pipeline">
-            <figcaption class="figure-caption">
+            <!-- justify text -->
+            <figcaption class="figure-caption" style="text-align: justify;">
               Our neural renderer learns an approximation of physically based rendering (PBR) using 3 decomposed MLPs accounting for environment lighting, diffuse rendering, and specular rendering, respectively. Each Env. MLP represents one speficic environment light probe. 
-              We utilize Filament PBR engine to synthesize training images during runtime. The pre-trained diffuse and specular MLPs will be fixed and integrated into implicit surface models for reconstructing and rendering general scenes.
+              We utilize Filament PBR engine to synthesize training images during runtime. The pre-trained diffuse and specular MLPs will be fixed and integrated into implicit surface models for reconstructing and rendering general scenes. A simple demo for rendering spheres is available in a <a href="https://colab.research.google.com/github/nexuslrf/ENVIDR/blob/main/demo.ipynb">Colab Notebook</a>.
             </figcaption>
           </figure>
         </div>
