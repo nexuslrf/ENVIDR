@@ -108,6 +108,32 @@
   </section>
   <br>
 
+  <section>
+    <div class="container">
+      <div class="row" style="max-width: 75%; margin: 0 auto;">
+        <div class="col-12 text">
+          <h3>Overview</h3>
+          <!-- <div class="row justify-content-center" style="align-items:center;">
+            <div> 
+              <img src="./static/image/render_overview.jpg" alt="Envidr" class="img-responsive" width="100%">
+            </div>
+          </div>
+          <br>
+          
+          <p class="text-justify ">
+            Our neural renderer learns an approximation of physically based rendering (PBR) using 3 decomposed MLPs accounting for environment lighting, diffuse rendering, and specular rendering, respectively.
+          </p> -->
+          <figure class="figure">
+            <img src="./static/image/render_overview.jpg" class="figure-img img-fluid rounded" alt="Pipeline">
+            <figcaption class="figure-caption">
+              Our neural renderer learns an approximation of physically based rendering (PBR) using 3 decomposed MLPs accounting for environment lighting, diffuse rendering, and specular rendering, respectively. Each Env. MLP represents one speficic environment light probe. 
+              We utilize Filament PBR engine to synthesize training images during runtime. The MLPs used in our neural renderer are some simple and tiny MLPs.
+              The pre-trained diffuse and specular MLPs will be fixed and integrated into implicit representation model for rendering and reconstructing general scenes.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
 
   <!-- citing -->
   <!-- <div class="container">
