@@ -19,7 +19,7 @@
 
   <!-- bootstrap -->
   <link href="./static/css/bootstrap-4.4.1.css" rel="stylesheet">
-  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="./static/css/bootstrap.min.css" rel="stylesheet"> -->
   <!-- icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <!-- font -->
@@ -29,6 +29,41 @@
     body {
       background: rgb(255, 255, 255) no-repeat fixed top left;
       font-family:'Open Sans', sans-serif;
+    }
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family:'Open Sans', sans-serif;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: calc(56.25% * 0.80); /* 16:9 */
+        width: 80%;
+        height: 0;
+        /* center */
+        margin: 0 auto;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .video-wrapper {
+      text-align: center;
+      width: 24%;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
     }
   </style>
   <script src="static/js/video_comparison.js"></script>
@@ -83,16 +118,6 @@
 
           </h6></div>
         </div>
-
-        <div class="row" style="padding-top: 20px; margin: 0 auto;">
-          <div class="col-md-8 col-md-offset-2">
-              <div class="video-compare-container" id="materialsDiv">
-                  <video class="video" id="materials" loop playsinline autoPlay muted src="static/video/garden_split.mp4" onplay="resizeAndPlay(this)"></video>
-                  <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
-              </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -167,7 +192,48 @@
     </div>
   </div> -->
 
+  <!-- Results -->
+  <section>
+    <div class="container">
+      <div class="row" style="max-width: 75%; margin: 0 auto;">
+        <div class="col-12 text">
+          <h3>Results</h3>
+          <div class="text-center">
+            <iframe width="640" height="360" src="https://drive.google.com/file/d/18kU-IWVxboCG8SCGgrBA5JHC0JIgPCS8/preview" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
 
+  <!-- Neural View Synthesis -->
+  <section>
+    <div class="container">
+      <div class="row" style="max-width: 75%; margin: 0 auto;">
+        <div class="col-12 text">
+          <h3>Neural View Synthesis</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-12 d-flex justify-content-center">
+      <div class="video-compare-container" id="materialsDiv">
+          <video width = "960" height = "180" class="video" id="materials" loop playsinline autoPlay muted src="./static/video/NVS_comparison.mp4"></video>
+      </div>
+    </div> -->
+
+    <div class="row" style="padding-top: 20px; margin: 0 auto;">
+      <div class="col-12 d-flex justify-content-center">
+          <div class="video-compare-container" id="materialsDiv">
+              <video class="video" id="materials" playsinline autoPlay muted loop src="static/video/garden_split_with_reverse.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
+          </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
   <!-- Misc -->
   <section>
     <div class="container">
