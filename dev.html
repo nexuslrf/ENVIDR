@@ -173,7 +173,7 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
   <br>
 
   <!-- citing -->
@@ -215,25 +215,35 @@
           <h3>Neural View Synthesis</h3>
         </div>
       </div>
-    </div>
 
-    <!-- <div class="col-12 d-flex justify-content-center">
-      <div class="video-compare-container" id="materialsDiv">
-          <video width = "960" height = "180" class="video" id="materials" loop playsinline autoPlay muted src="./static/video/NVS_comparison.mp4"></video>
+      <div class="row" style="max-width: 75%; margin: 0 auto;">
+        <div class="col-md-6">
+          <div class="video-compare-container" id="materialsDiv">
+            <video class="video" id="materials" playsinline autoPlay muted loop src="static/video/material_split_with_reverse.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="video-compare-container" id="toastersDiv">
+            <video class="video" id="toasters" playsinline autoPlay muted loop src="static/video/toaster_split.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="toastersMerge"></canvas>
+          </div>
+        </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="row" style="padding-top: 20px; margin: 0 auto;">
       <div class="col-12 d-flex justify-content-center">
-          <div class="video-compare-container" id="materialsDiv">
-              <video class="video" id="materials" playsinline autoPlay muted loop src="static/video/garden_split_with_reverse.mp4" onplay="resizeAndPlay(this)"></video>
-              <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
+          <div class="video-compare-container" id="gardenDiv">
+            <video class="video" id="garden" playsinline autoPlay muted loop src="static/video/garden_split_with_reverse.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="gardenMerge"></canvas>
           </div>
       </div>
     </div>
+  
   </section>
   <br>
-  
 
   <!-- Relighting -->
   <section>
@@ -247,7 +257,7 @@
           <img id="image_relight_0" src="./static/video/env8.png" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <video id="video_relight_0" width="100%" height="auto" autoplay controls>
+          <video id="video_relight_0" width="100%" height="auto" autoPlay muted loop controls>
             <source src="./static/video/sphere_8.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -257,7 +267,7 @@
           <img id="image_relight_1" src="./static/video/env9.png" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <video id="video_relight_1" width="100%" height="auto" autoplay controls>
+          <video id="video_relight_1" width="100%" height="auto" autoPlay muted loop controls>
             <source src="./static/video/sphere_9.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
