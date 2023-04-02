@@ -234,6 +234,43 @@
   </section>
   <br>
   
+
+  <!-- Relighting -->
+  <section>
+    <div class="container">
+      <div class="row" style="max-width: 75%; margin: 0 auto;">
+        <div class="col-12 text">
+          <h3>Relighting</h3>
+        </div>
+
+        <div class="col-md-6">
+          <img id="image_relight_0" src="./static/video/env8.png" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <video id="video_relight_0" width="100%" height="auto" autoplay controls>
+            <source src="./static/video/sphere_8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="col-md-6">
+          <img id="image_relight_1" src="./static/video/env9.png" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <video id="video_relight_1" width="100%" height="auto" autoplay controls>
+            <source src="./static/video/sphere_9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  
+
   <!-- Misc -->
   <section>
     <div class="container">
@@ -273,6 +310,22 @@
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script> -->
 
+  <script>
+    const image_0 = document.getElementById('image_relight_0');
+    const video_0 = document.getElementById('video_relight_0');
+    const image_1 = document.getElementById('image_relight_1');
+    const video_1 = document.getElementById('video_relight_1');
+    
+    image_0.addEventListener("load", function() {
+      // Set video height equal to image height
+      video_0.style.height = image_0.offsetHeight + 'px';
+      // video_1.style.height = image_1.offsetHeight + 'px';
+    });
 
+    image_1.addEventListener("load", function() {
+      // Set video height equal to image height
+      video_1.style.height = image_1.offsetHeight + 'px';
+    });
+  </script>
 
 </body></html>
