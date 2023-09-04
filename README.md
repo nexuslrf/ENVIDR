@@ -12,6 +12,7 @@ The official PyTorch codebase for ICCV'23 paper "*ENVIDR*: Implicit Differentiab
 
 [2023/09/03] Upload the pretrained checkpoints for rendering MLPs at [`./ckpts`](./ckpts/).
 
+
 [2023/08/11] Release more training and evaluation codes. The pre-trained checkpoints will be updated later.
 
 ## Setup
