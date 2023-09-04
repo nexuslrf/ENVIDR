@@ -10,6 +10,7 @@ The official PyTorch codebase for ICCV'23 paper "*ENVIDR*: Implicit Differentiab
 
 ## Updates
 
+[2023/09/03] Upload the pretrained checkpoints for rendering MLPs at [`./ckpts`](./ckpts/).
 [2023/08/11] Release more training and evaluation codes. The pre-trained checkpoints will be updated later.
 
 ## Setup
@@ -62,7 +63,7 @@ To learn the pre-trained rendering MLPs, you additionally need download a set of
 bash prepare_hdri.sh
 ```
 
-In case you fail to convert the HDRI into KTX file, we also provide our pre-computed KTX file.
+In case you fail to convert the HDRI into KTX file, we also provide our [pre-computed KTX file](https://drive.google.com/file/d/1Khqt1g244HkVFnIxFNLMnupa9_V7-s75/view?usp=sharing).
 
 After obtaining the converted KTX files for environment map, you can run `generate_set.py` to verify the rendering results and also a get a set of sample images for the evaluation purpose during training.
 
@@ -75,6 +76,8 @@ The results will be written to `data/env_sphere/env_dataset` by default.
 ## Training
 
 ### Neural Renderer
+
+*You can use our provided [pre-trained rendering MLPs](./ckpts/) to skip this step.*
 
 To train a neural renderer from scratch:
 

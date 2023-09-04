@@ -367,7 +367,7 @@ def extract_env_ckpt(ckpt_path):
         env_net_dict = {}
         found_id = False
         for k, v in model_dict.items():
-            prefix = f'env_nets.{env_id}'
+            prefix = f'env_nets.{env_id}.'
             if k.startswith(prefix):
                 env_net_dict['env_net' + k[len(prefix):]] = v
                 found_id = True
